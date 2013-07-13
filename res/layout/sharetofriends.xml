@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/share_2_friend_all"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <ImageView
+        android:id="@+id/s2f_comment_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/share_bottom_layout"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@color/transparent" />
+    <RelativeLayout
+        android:id="@+id/share_bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="240dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/share_cancel"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <Button
+                android:id="@+id/share_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/share_contact"
+                android:text="@string/share_contact"
+                android:textColor="#46a0fa" />
+            <Button
+                android:id="@+id/share_weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/share_weixin"
+                android:text="@string/share_weixin"
+                android:textColor="#75b968"
+                android:visibility="visible" />
+            <Button
+                android:id="@+id/share_sina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/share_weibo"
+                android:text="@string/share_weibo"
+                android:textColor="#c43333" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/share_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/share_cancel"
+            android:text="@string/cancel"
+            android:textColor="#a9b2ba" />
+    </RelativeLayout>
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/corners" />
+</RelativeLayout>

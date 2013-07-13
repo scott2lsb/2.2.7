@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mail_all"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+  >
+    <!-- 标题 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="top"
+        android:background="@drawable/all_title" >
+        <ImageButton
+            android:id="@+id/mail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            android:src="@drawable/top_left_back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/mail_title"
+            android:textColor="@color/white"
+            android:textSize="19dp"
+            android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/mail_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            android:src="@drawable/refresh_btn" />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/mail_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top"
+        android:layout_marginTop="43dp"
+        android:divider="@drawable/lr_pt_item_line"
+        android:dividerHeight="1dp"
+        android:background="#99ffffff"
+        android:cacheColorHint="#00000000" >
+    </ListView>
+    <ImageView
+        android:id="@+id/mail_bg_pic_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#00000000"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:visibility="gone" />
+    <!-- 通信等待框 -->
+    <RelativeLayout
+        android:id="@+id/mail_pb_layout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/mainpage_more_btn_normal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+        <ProgressBar
+            android:id="@+id/mail_pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center" />
+    </RelativeLayout>
+    
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/corners" /> 
+</FrameLayout>

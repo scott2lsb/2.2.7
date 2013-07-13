@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="bindweibo"
+        android:summaryOff="@string/pre_bindweibo_off"
+        android:summaryOn="@string/pre_bindweibo_on"
+        android:title="@string/pre_bindweibo" />
+
+    <PreferenceCategory android:title="@string/pre_cache_option" >
+        <Preference
+            android:defaultValue="false"
+            android:key="clearCache"
+            android:summaryOff="@string/pre_cache_not_clear"
+            android:summaryOn="@string/pre_cache_clear"
+            android:title="@string/pre_cache_option" />
+    </PreferenceCategory>
+	<PreferenceCategory android:title="@string/pre_save_model" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="saveModel"
+            android:summaryOff="@string/pre_save_model_off"
+            android:summaryOn="@string/pre_save_model_on"
+            android:title="@string/pre_save_model" />
+    </PreferenceCategory>
+    
+</PreferenceScreen>
